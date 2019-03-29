@@ -1,0 +1,57 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    .typewriter {
+    color: blue;
+    font-size: 20px;
+}
+.typewriter .lastLetter {
+    color: darkblue;
+}
+
+    </style>
+    </head>
+    <body>
+    <p id="target1" class="typewriter"></p>
+       <hr/>
+    <p id="target2" class="typewriter"></p>
+        <script>
+        typewriter = function(selector, lines) {
+    var target = document.querySelector(selector)
+    var lineDelay = 500
+    var charDelay = 80
+
+    var ln = 0
+    var line = lines[ln]
+    var char, timer = 0
+
+    var printWord = function(){
+        char = 0
+        timer = setInterval(function(){
+            if (char < line.length) {
+                target.innerHTML = line.substring(0, char)
+                    + '<span class="lastLetter">'
+                    + line.substr(char,1)
+                    + '</span>'
+                char++
+            } else {
+                clearTimeout(timer);
+                timer = setTimeout(function(){
+                    ln = ++ln<lines.length?ln:0
+                    line = lines[ln] // change line
+                    printWord()
+                }, lineDelay);
+            }
+        }, charDelay);
+    }
+    printWord()
+}
+
+        typewriter('#target1', [" Числительное пол в составе сложного слова пишется: Слитно, если вторая часть сложного слова представлена нарицательным сущиствительным в форме Р.п и нчинается с согласной буквы (кроме ..Л..), а также в составе наречий например вполголоса, вполчаса, вполсилы.2) Написание слов через дефис, если вторая часть сложного слова начинается: а) с гласной: пол-юбки, пол-эклера, пол-анаса. б) с заглавной буквы: пол-Европы, пол-Ростова. в) с согласной ..л..: пол-лимона, пол-лета, пол-ложки. ИСКЛЮЧЕНИЕ поллитровка 3) Раздельно, если между пол и существительным стоит определение: пол бабушкиного дома. Числительные полу всегда пишется слитно: полукубок, полудубликат.
+            "])
+typewriter('#target', [' — Здравствуйте, это канал об аниме? ', ' — Да ', ' — Как мне пропатчить KDE2 под FreeBSD? '])
+            </script>
+    </body>
+</html>

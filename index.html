@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/font-awesome.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/media.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Cuprum" rel="stylesheet">
+    <title>Tom menu</title>
+
+    <style>
+        /*basic reset */
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Page settings */
+
+        html {
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, #fff 0%, #aaa 100%) no-repeat;
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+
+        body {
+            text-align: center;
+            display: table;
+            background: black;
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+
+        canvas {
+            display: block;
+        }
+
+        #author {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            color: #0F0;
+            z-index: 1;
+            box-sizing: border-box;
+            vertical-align: middle;
+        }
+
+        span {
+            font-family: monospace;
+            font-size: 1.5em;
+        }
+
+        span:after {
+            content: "_basharin";
+            opacity: 0;
+            animation: cursor 1s infinite;
+        }
+
+        @keyframes cursor {
+            0% {
+                opacity: 0;
+            }
+            40% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .new_page {
+            position: fixed;
+            color: red;
+            left: 90%;
+            top: 90%;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+
+    <!-- <div id="wrapper">
+        
+        <div id="pass-window">
+            <p>
+                <h3>Пожалуйста, введите пароль:</h3>
+            </p>
+            <p><input id="pass" type="text" /></p>
+            <p id="button"><input type="button" value="Принять" onClick="javascript:Accept();" /></p>
+        </div>
+    </div>
+    <div id="mask"></div>-->
+
+
+
+
+    <header>
+        <nav class="dws-menu">
+            <input type="checkbox" name="toggle" id="menu" class="toggleMenu">
+            <label for="menu" class="toggleMenu"><i class="fa fa-bars"></i>links</label>
+            <ul>
+                <li>
+                    <input type="checkbox" name="toggle" class="toggleSubmenu" id="sub_m0">
+                    <a href="#"><i class="fa fa-laptop"></i>Web_site</a>
+                    <label for="sub_m0" class="toggleSubmenu"><i class="fa"></i></label>
+                    <ul>
+                        <li><a href="https://reshak.ru/reshebniki/geometriya/10/atanasyan10-11/index.php" target="_blank">Project_1</a></li>
+                        <li><a href="project_2/Project_2.html" target="_blank">Project_2</a></li>
+                        <li><a href="new.html" target="_blank">Project_3</a></li>
+                        <li><a href="project_4/project_4.html" target="_blank">Project_4</a></li>
+                        <li><a href="project_5/project_5.html" target="_blank">Project_5</a></li>
+                        <li><a href="text.html/index.html" target="_blank">project_6</a></li>
+                        <li><a href="https://vklasse.online/10-klass/reshebniki/algebra/sha-alimov-yum-kolyagin-mv-tkacheva-2012" target="_blank">project_7</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <input type="checkbox" name="toggle" class="toggleSubmenu" id="sub_m1">
+                    <a href="#"><i class="fa fa-cubes"></i>Games</a>
+                    <label for="sub_m1" class="toggleSubmenu"><i class="fa"></i></label>
+                    <ul>
+                        <li><a href="game_1/game_1.html">GameCillBiord</a></li>
+                        <li><a href="game_2/index.html">GameCar</a></li>
+                        <li><a href="#"> 3</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <input type="checkbox" name="toggle" class="toggleSubmenu" id="sub_m2">
+                    <a href="#"><i class="fa fa-th-list"></i>Д/З сайты</a>
+                    <label for="sub_m2" class="toggleSubmenu"><i class="fa"></i></label>
+                    <ul>
+                        <li><a href="#" target="_blank"> Единное окно доступа к образоваетльным системам</a></li>
+                        <li><a href="http://www.ict.edu.ru/" style="color: red;" target="_blank"> Портал инормационно портативных технологий </a></li>
+                        <li><a href="#" target="_blank"> Образовательные видео</a></li>
+                        <li><a href="http://www.iprbookshop.ru/" target="_blank"> Электронная библиотека</a></li>
+                        <li><a href="http://school-collection.edu.ru/" style="color: green;" target="_blank"> Единная коллерция цифровых ресурсов</a></li>
+                        <li><a href="https://reshak.ru/reshebniki/geometriya/10/atanasyan10-11/index.php" target="_blank"> Федеральный центр информационных ресурсов</a></li>
+                        <li><a href="https://resheba.com/gdz/algebra/11-klass/alimov" terget="_blank"> Образовательный ресурс сети</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#"><i class="fa fa-th-list"></i>jd23948</a></li>
+
+
+                <li><a href="#"><i class="fa fa-envelope-open"></i>jr9439k</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- <li>
+                    <input type="checkbox" name="toggle" class="toggleSubmenu" id="sub_m1">
+                    <a href="#"><i class="fa fa-cubes"></i>Games</a>
+                    <label for="sub_m1" class="toggleSubmenu"><i class="fa"></i></label>
+                    <ul>
+                        <li>
+                            <input type="checkbox" name="toggle" class="toggleSubmenu" id="sub_m1-1">
+                            <a href="#">1</a>
+                            <label for="sub_m1-1" class="toggleSubmenu"><i class="fa"></i></label>
+                            <ul>
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="toggle" class="toggleSubmenu" id="sub_m1-2">
+                            <a href="#">1</a>
+                            <label for="sub_m1-2" class="toggleSubmenu"><i class="fa"></i></label>
+                            <ul>
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li>
+                                    <input type="checkbox" name="toggle" class="toggleSubmenu" id="sub_m1-2-1">
+                                    <a href="#">1</a>
+                                    <label for="sub_m1-2-1" class="toggleSubmenu"><i class="fa"></i></label>
+                                    <ul>
+                                        <li><a href="#">Samsung</a></li>
+                                        <li><a href="#">Flf</a></li>
+                                        <li><a href="#">Apple</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="game.html">GameCillBiord</a></li>
+                    </ul>
+                </li>-->
+    <a href="#">
+        <p class="new_page">......</p>
+    </a>
+
+    <canvas id="c"></canvas>
+    <span id="author">maxim</span>
+
+    <script>
+        /* function Accept() {
+                    var pass = document.getElementById('pass').value;
+                    win = document.getElementById('pass-window');
+                    mask = document.getElementById('mask');
+                    if (pass == '123') { // Указываем правильный пароль
+                        win.style.display = 'none';
+                        mask.style.display = 'none';
+                    } else {
+                        alert('Введенный Вами пароль неверен!');
+                    }
+                }*/
+
+
+
+        // geting canvas by id c
+        var c = document.getElementById("c");
+        var ctx = c.getContext("2d");
+
+        //making the canvas full screen
+        c.height = window.innerHeight;
+        c.width = window.innerWidth;
+
+        //chinese characters - taken from the unicode charset
+        var matrix = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%";
+        //converting the string into an array of single characters
+        matrix = matrix.split("");
+
+        var font_size = 10;
+        var columns = c.width / font_size; //number of columns for the rain
+        //an array of drops - one per column
+        var drops = [];
+        //x below is the x coordinate
+        //1 = y co-ordinate of the drop(same for every drop initially)
+        for (var x = 0; x < columns; x++)
+            drops[x] = 1;
+
+        //drawing the characters
+        function draw() {
+            //Black BG for the canvas
+            //translucent BG to show trail
+            ctx.fillStyle = "rgba(0, 0, 0, 0.04)";
+            ctx.fillRect(0, 0, c.width, c.height);
+
+            ctx.fillStyle = "#0F0"; //green text
+            ctx.font = font_size + "px arial";
+            //looping over drops
+            for (var i = 0; i < drops.length; i++) {
+                //a random chinese character to print
+                var text = matrix[Math.floor(Math.random() * matrix.length)];
+                //x = i*font_size, y = value of drops[i]*font_size
+                ctx.fillText(text, i * font_size, drops[i] * font_size);
+
+                //sending the drop back to the top randomly after it has crossed the screen
+                //adding a randomness to the reset to make the drops scattered on the Y axis
+                if (drops[i] * font_size > c.height && Math.random() > 0.975)
+                    drops[i] = 0;
+
+                //incrementing Y coordinate
+                drops[i]++;
+            }
+        }
+
+        setInterval(draw, 35);
+
+    </script>
+
+</body>
+
+</html>

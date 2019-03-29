@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+p {
+    text-decoration: none;
+}
+
+header {
+    
+}
+
+.menu {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.menu div {
+    margin-right: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .menu div {
+        margin-top: 30px;
+    }
+}

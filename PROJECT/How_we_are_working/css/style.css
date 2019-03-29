@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+p {
+    text-decoration: none;
+}
+
+body {
+    
+}
+
+.oll_type {
+    margin-left: 1.7%;
+    margin-top: 63px;
+    justify-content: center;
+}
+
+head_text h1 {
+
+}
+
+.block {
+    display: flex;
+}
+
+ .circle {
+     
+    border: 2px solid #000;
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+}
+
+.circle i:before {
+    display: grid;
+     align-self: center;
+     justify-self: center;
+    font-size: 45px;
+}
+
+div .box_top {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
